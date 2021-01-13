@@ -1,0 +1,64 @@
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+   
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+   
+  html {
+    font-size: 62.5%;
+  }
+   
+  body {
+    font-size: 1.6rem;
+    font-family: "Lato", sans-serif;
+    color: #ffffff;
+    background-color: #f6f6f6;
+    /* overflow: hidden; */
+  }
+   
+  a {
+    color: #b54240;
+    text-decoration: none;
+  }
+   
+  img {
+    max-width: 100%;
+  }
+  .cd-product-viewer-wrapper {
+    text-align: center;
+  }
+  .cd-product-viewer-wrapper > div {
+    display: inline-block;
+  }
+  .cd-product-viewer-wrapper .product-viewer {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    overflow: hidden;
+  }
+  .cd-product-viewer-wrapper img {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .cd-product-viewer-wrapper .product-sprite {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3400%;    /*注意：这里的宽度也是小图片的数量*100%*/
+    background: url(./img/whtiecar.png) no-repeat center center;
+    background-size: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+  .cd-product-viewer-wrapper.loaded .product-sprite {
+    opacity: 1;
+    cursor: ew-resize;
+  }
