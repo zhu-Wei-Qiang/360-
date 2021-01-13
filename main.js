@@ -12,8 +12,8 @@ function init(){
 	imagePath:'img/',  //图片所在路径，最后一定要有/。如果图片有前缀，也可以写在/后
 	filePrefix: '',
 	ext: '.jpg',
-	height: 667,
-	width: "100%",
+	height: 167,  //    默认转化为数字类型  没有该属性时 默认300px
+	width: '',  // auto 100%  转换为数字都为NaN   没有该属性时 默认300px
 	navigation: true,
 	disableSpin: false
   });
